@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "9OoyhtJC4ESeIdc91je/Ihmnz9sb7UmKIbpdRBZMgbz78HioBJW9zcT7uBqxw87B206HvpEcqbK0zQVvP3XlSA==",
+  "success": true,
+  "projectFilePath": "D:\\VS_Code\\AngularJS\\StoresWeb\\API_StoresWeb\\API_StoresWeb\\API_StoresWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\toanq\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\toanq\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\toanq\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\toanq\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\toanq\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\toanq\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

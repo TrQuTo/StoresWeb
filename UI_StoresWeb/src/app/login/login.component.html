@@ -1,0 +1,56 @@
+<h2 mat-dialog-title class="login" i18n>Login to StoresWeb</h2>
+<mat-dialog-content style="padding-top: 10px;">
+  <p>
+    <mat-form-field class="login" appearance="outline">
+      <mat-label i18n>Email</mat-label>
+      <input matInput placeholder="Please input..." i18n-placeholder>
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="login" appearance="outline">
+      <mat-label i18n>Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-hint class="msg-invalid" i18n>Email or passoword is invalid!</mat-hint>
+    </mat-form-field>
+  </p>
+  <div class="login select-login">
+    <mat-form-field class="login" appearance="outline">
+      <mat-label i18n>Select a language</mat-label>
+      <mat-select class="selected-value" required="true" [(value)]="lang" (selectionChange)="selectedLang($event)">
+        <mat-select-trigger>
+            <div class="row">
+                <mat-icon matSuffix class="icon-country" style="width: 50px;">
+                  <img src="assets/icon-svg/Flag_{{lang.valueOf()}}.svg" alt="{{lang.valueOf()}}" />
+                </mat-icon>
+                {{lang.valueOf()}}
+            </div>
+        </mat-select-trigger>
+        <mat-option value="Vietnamese" i18n class="icon-country">
+          <mat-icon matSuffix class="icon-country">
+            <img src="assets/icon-svg/Flag_Vietnamese.svg" alt="Vietnam" />
+          </mat-icon>
+          Vietnamese
+        </mat-option>
+        <mat-option value="English"  i18n>
+          <mat-icon matSuffix class="icon-country">
+            <img src="assets/icon-svg/Flag_English.svg" alt="United Kingdom" />
+          </mat-icon>
+          English
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-checkbox i18n>Save passowrd!</mat-checkbox>
+  <div class="button-row login">
+    <button class="login" mat-stroked-button i18n>Login</button>
+  </div>
+  <mat-hint><a class="login" i18n>Forget passoword ?</a></mat-hint><br />
+  <mat-hint><a class="login" (click)="openSignupDialog('400ms', '200ms')" i18n>I don't have an account! Sign Up
+      ?</a></mat-hint>
+</mat-dialog-content>

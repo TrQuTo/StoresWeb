@@ -1,0 +1,82 @@
+<h2 mat-dialog-title class="login">Create a account</h2>
+<mat-dialog-content style="padding-top: 10px;">
+    <p style="margin-bottom: 0px;">
+        <mat-form-field id="firstName" class="name" appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput required="true" [formControl]="firstName" [errorStateMatcher]="firstNameMatcher"
+                placeholder="Please input...">
+            @if (firstName.hasError('required')) {
+            <mat-error>First Name is required!</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field id="lastName" class="name" appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput [formControl]="lastName" [errorStateMatcher]="lastNameMatcher"
+                placeholder="Please input...">
+            @if (lastName.hasError('required')) {
+            <mat-error>Last Name is required!</mat-error>
+            }
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-chip-listbox class="margin-bottom: 12px;" aria-label="Sex selection">
+            <mat-chip-option style="margin-left: 5%; margin-right: 10%;">
+                <img matChipAvatar style="width: 35px; height: 35px;" src="assets/images/icons8-man-in-blue-t-shirt.png" alt="Male"/>
+                Male
+            </mat-chip-option>
+            <mat-chip-option color="accent" style="margin-left: 5%; margin-right: 10%;">
+                <img matChipAvatar style="width: 35px; height: 35px;" src="assets/images/icons8-short-hair-business-lady-with-glasses.png" alt="Female"/>
+                Female
+            </mat-chip-option>
+            <mat-chip-option color="warn" selected style="margin-left: 5%;">
+                <img matChipAvatar style="width: 35px; height: 35px;" src="assets/images/unset_sex.png" alt="Unset"/>
+                Unset
+            </mat-chip-option>
+        </mat-chip-listbox>
+    </p>
+    <p style="margin-bottom: 0px;">
+        <mat-form-field class="login" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput [formControl]="email" [errorStateMatcher]="emailMatcher"
+                placeholder="Ex. storesweb@gmail.com">
+            @if (email.hasError('email') && !email.hasError('required')) {
+            <mat-error>Please enter a valid email address.</mat-error>
+            }
+            @if (email.hasError('required')) {
+            <mat-error>Email is required!</mat-error>
+            }
+        </mat-form-field>
+    </p>
+    <p style="margin-bottom: 0px;">
+        <mat-form-field id="phone" class="login" appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput required="true" [formControl]="phone" [errorStateMatcher]="phoneMatcher"
+                placeholder="Please input...">
+            @if (phone.hasError('required')) {
+            <mat-error>Phone number is required!</mat-error>
+            }
+        </mat-form-field>
+    </p>
+    <p style="margin-bottom: 0px;">
+        <mat-form-field class="login" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [formControl]="password" [errorStateMatcher]="passwordMatcher"
+                [value]="Pass">
+            @if (password.hasError('required')) {
+            <mat-error>First Name is required!</mat-error>
+            }
+        </mat-form-field>
+    </p>
+    <p style="margin-bottom: 0px;">
+        <mat-form-field class="login" appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" [value]="cfPass">
+            <mat-hint class="msg-invalid">Your passowrds don't match.</mat-hint>
+        </mat-form-field>
+    </p>
+    <div class="button-row login">
+        <button class="login" mat-stroked-button>Signup</button>
+    </div>
+    <mat-hint><a class="login" (click)="openLoginDialog('400ms', '200ms')">I have an account! Login
+    ?</a></mat-hint>
+</mat-dialog-content>

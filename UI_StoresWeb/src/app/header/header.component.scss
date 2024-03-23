@@ -1,0 +1,88 @@
+.brand-name {
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid #f7133d;
+    font-weight: 900;
+}
+
+.nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+a.nav-link:hover {
+    border-bottom: 3px solid #f7133d;
+}
+
+li.nav-item {
+    width: 110px;
+}
+
+li>a {
+    text-align: center;
+    font-weight: 400;
+    font-size: large;
+}
+
+ul.nav {
+    width: 550px;
+    height: 70px;
+    align-content: center;
+}
+
+a.brand-name {
+    font-size: xx-large;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+button.btn-login {
+    border: 1px solid #f7133d;
+    text-shadow: -1px 0 #f7133d, 0 1px #f7133d, 1px 0 #f7133d, 0 -1px #f7133d;
+
+}
+
+button.btn-signup {
+    background: linear-gradient(to right bottom, #f7133d, #FF9A5A);
+    text-shadow: -1px 0 #f7133d, 0 1px #f7133d, 1px 0 #f7133d, 0 -1px #f7133d;
+}
+
+.btn-signup,
+.btn-login {
+    border: 0;
+    border-radius: 10px;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    display: inline-block;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.btn-signup:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.btn-signup:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.btn-login:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(255, 255, 255, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.btn-login:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(255, 255, 255, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
