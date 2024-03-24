@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/API_StoresWeb/API_StoresWeb/bin/Debug/net8.0/API_StoresWeb.exe
+/API_StoresWeb/bin
+/API_StoresWeb/obj
+/.vs
