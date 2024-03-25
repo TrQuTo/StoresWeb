@@ -2,7 +2,7 @@
 {
     public class UsersModel
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public required string Code { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }

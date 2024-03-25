@@ -1,5 +1,7 @@
+using API_StoresWeb.Data;
 using API_StoresWeb.Repositories;
 using API_StoresWeb.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsers, UsersRepos>();
+//builder.Services.AddDbContext<UsersAPIDbContact>(options => options.UseInMemoryDatabase("StoresWebDb"));
+builder.Services.AddDbContext<StoresWebAPIDbContact>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("StoresWebAPIConnectionString")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
