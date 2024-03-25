@@ -14,7 +14,7 @@ namespace API_StoresWeb.Repositories
             {
                 new UsersModel()
                 {
-                    ID = 0,
+                    ID = Guid.NewGuid(),
                     Code = "UserCode0",
                     Name  = "Trần Quốc Toàn 0",
                     Email = "tranquoctoan0@gmail.com",
@@ -34,7 +34,7 @@ namespace API_StoresWeb.Repositories
                 },
                 new UsersModel()
                 {
-                    ID = 1,
+                    ID = Guid.NewGuid(),
                     Code = "UserCode1",
                     Name  = "Nguyễn Thị Thuý Liễu",
                     Email = "nguyenthithuylieu0@gmail.com",
@@ -54,7 +54,7 @@ namespace API_StoresWeb.Repositories
                 },
                 new UsersModel()
                 {
-                    ID = 2,
+                    ID = Guid.NewGuid(),
                     Code = "UserCode2",
                     Name  = "Lâm Thị Bảo",
                     Email = "lamthibao@gmail.com",
